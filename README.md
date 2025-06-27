@@ -24,6 +24,7 @@ I'm following tutorials from W3Schools, Kaggle, and official documentation.
 - Conditional statements
 - Loops and functions
 - Lists, dictionaries, and sets
+- How to write clean Python code
 
 ### 2. Libraries and Tools
 - `NumPy` – numerical operations and arrays  
