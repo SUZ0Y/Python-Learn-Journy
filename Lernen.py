@@ -246,5 +246,12 @@ thisDict = {
     "Jahr": 1964,
     "verkäufer": "kp"
 }
-print(thisDict)
 
+#dictonaries or kurz dict, abfragen
+print(thisDict)
+x = thisDict["marke"]
+print(f"Die Marke ist {x}!")
+
+#dict erstellen v2
+testDict = dict(name = "Aaron", alter = 4, land = "deutschland")
+print(testDict)
