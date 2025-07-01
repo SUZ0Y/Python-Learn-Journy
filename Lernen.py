@@ -99,8 +99,6 @@ else:
 list_test = ["apple", "banana", "strawberry", 4, 2]
 for i in range(len(list_test)):
     print(list_test[i])
-"""
-
 
 # Listen ---------------------------------------- 2ter Tag  = Jun 27
 mylist = ['apple', 'banana', "cool"]
@@ -189,9 +187,28 @@ print("\tNummer Liste \t", nummer_Liste, len(nummer_Liste))
 print("\t\tObst Salat\t\t",obst_Salat, len(obst_Salat))
 print("\t\t\tZusammen gefügte Liste\t\t",zusammen_Gefuegt, len(zusammen_Gefuegt))
 
-
-
-
-
-
+#-------------------------Tuples
+tuple_Test = ("regen", "wind", "storm", "noch was")
+#tuple mit einer item, brauchen hinten ein Komma
+tuple_Eins = ("test Schon?",)
+print(type(tuple_Eins))
+#packing and unpacking, * speichert alle verbleiblichen zu einer liste
+(gut, sehr_gut, *joa) = tuple_Test
+#gleiche geht auch in der Mitte
+(eins, *zwei, drei) = tuple_Test
+print(zwei)
+#ausgabe mit index numbers
+for x in range(len(tuple_Test)):
+    if tuple_Test[x] == "regen":
+        print(tuple_Test[x])
+#asugabe mit while loop
+i = 0
+while i < len(tuple_Test):
+    print(tuple_Test[i])
+    i += 1
+#join tuples
+tuple3 = tuple_Test +  tuple_Eins
+tuple4 = tuple3 * 20
+print(tuple4)
+"""
 
