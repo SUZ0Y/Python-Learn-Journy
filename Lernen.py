@@ -210,5 +210,41 @@ while i < len(tuple_Test):
 tuple3 = tuple_Test +  tuple_Eins
 tuple4 = tuple3 * 20
 print(tuple4)
+
+#python sets--------------------------------------------------
+myset = {"apple", "banana", "cherry"}
+#addieren
+myset.add("orange")
+print(myset)
+#zusammenführen können auch listen oder tuples oder alles mögliche sein
+myset2 = {"lol", "mega", "mind"}
+myset.update(myset2)
+#remove
+myset.remove("apple")
+#oder
+myset.discard("apple")
+#random item
+myset.pop()
+#clear
+myset.clear()
+#delete
+del myset
+#loops
+for x in myset2:
+    print(x)
+print(myset2)
+
+
 """
+
+#dictionaries -------------------------------------
+
+thisDict = {
+    "marke": "BMW",
+    "viersitzer": True,
+    "PS": 200,
+    "Jahr": 1964,
+    "verkäufer": "kp"
+}
+print(thisDict)
 
