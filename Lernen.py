@@ -234,10 +234,6 @@ for x in myset2:
     print(x)
 print(myset2)
 
-
-"""
-from ansible_collections.community.mysql.plugins.module_utils.mysql import mysql_driver_fail_msg
-
 #dictionaries -------------------------------------
 
 thisDict = {
@@ -354,3 +350,27 @@ for x, obj in myFamily.items():
     print(x)
     for y in obj:
         print(y + ";", obj[y])
+
+"""
+a = 10
+b = 5
+c = str("Hallo")
+d = "Ballo"
+
+if b < a:
+    print(a)
+elif a < b:
+    print(b)
+
+if c != d:
+    print("jup")
+else:
+    print("hallo")
+
+# short hand if
+if b < a: print("joh")
+# short if / else
+print("yo") if a < b else print("dumm")
+print("a") if a < b else print("b") if a == b else print("c")
+# nutbare logical operators and, or not,
+#if mit no content -> pass
