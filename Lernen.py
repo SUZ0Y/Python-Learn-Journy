@@ -236,6 +236,7 @@ print(myset2)
 
 
 """
+from ansible_collections.community.mysql.plugins.module_utils.mysql import mysql_driver_fail_msg
 
 #dictionaries -------------------------------------
 
@@ -257,3 +258,99 @@ testDict = dict(name = "Aaron", alter = 4, land = "deutschland")
 print(testDict)
 
 #dict access
+i = thisDict.get("PS")
+#   alle Namen auflisten
+a = thisDict.keys()
+#   alle Keys auflisten
+b = thisDict.values()
+#   beide Paare immer auflisten
+c = thisDict.items()
+print("\n\n", i, a, b, c, "\n")
+
+#change dicts
+#   einzelenen ändern
+thisDict.update({"marke": "Lambo"})
+
+#add items
+#   falls nicht exestiert, wird neues hizugefügt / ist case sensitive
+thisDict.update({"name": "Olaf"})
+thisDict.update({"Name": "Olaf"})
+
+#remove items
+#   mit namen löschen
+thisDict.pop("Name")
+del thisDict["PS"]
+
+#       letze Sache gelöscht (davor random vor 3.7)
+thisDict.popitem()
+
+#           komplett löschen
+#           del thisDict
+
+#               clearen, also alels rauslöschen
+    #thisDict.clear()
+
+#loop dicts
+#   alle key names
+for x in thisDict:
+  print(x)
+#   alle values
+for x in thisDict:
+    print(thisDict[x])
+for x in thisDict.values():
+    print(x)
+#   beides durch loopen
+for x,y in thisDict.items():
+    print(x,y)
+
+#copy Dictonaries
+    #kopieren
+twoDict = thisDict.copy()
+
+twodict = dict(thisDict)
+
+print(twoDict)
+
+#------nested Dictonaries -----
+
+myFamily = {
+    "child1" : {
+        "name" : 'Aaron',
+        'year': 2006
+    },
+    "child2" : {
+        "name" : "Olaf",
+        "year" : 2004
+    },
+    "child3" : {
+        "name" : "Thamin",
+        "year" : 2001
+    }
+}
+    #oder
+child11 = {
+  "name" : "Emil",
+  "year" : 2004
+}
+child22 = {
+  "name" : "Tobias",
+  "year" : 2007
+}
+child33 = {
+  "name" : "Linus",
+  "year" : 2011
+}
+
+myfamily2 = {
+  "child1" : child11,
+  "child2" : child22,
+  "child3" : child33
+}
+
+    #acess
+print("\n\t",myFamily["child2"]["name"])
+#   loop -> erste lopp gibt children und ihre werte aus. Obj sind die werte -> zweite loop, obj also die werte nochmal abgefragt über weitere Werten
+for x, obj in myFamily.items():
+    print(x)
+    for y in obj:
+        print(y + ";", obj[y])
